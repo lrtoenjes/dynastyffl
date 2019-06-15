@@ -1,15 +1,16 @@
 {
   "files": {
     "main.css": "/dynastyffl/static/css/main.682ca21c.chunk.css",
-    "main.js": "/dynastyffl/static/js/main.aea0d7a1.chunk.js",
-    "main.js.map": "/dynastyffl/static/js/main.aea0d7a1.chunk.js.map",
+    "main.js": "/dynastyffl/static/js/main.17e55ab2.chunk.js",
+    "main.js.map": "/dynastyffl/static/js/main.17e55ab2.chunk.js.map",
     "runtime~main.js": "/dynastyffl/static/js/runtime~main.a40ea988.js",
     "runtime~main.js.map": "/dynastyffl/static/js/runtime~main.a40ea988.js.map",
-    "static/js/2.86a2265c.chunk.js": "/dynastyffl/static/js/2.86a2265c.chunk.js",
-    "static/js/2.86a2265c.chunk.js.map": "/dynastyffl/static/js/2.86a2265c.chunk.js.map",
+    "static/js/2.86e2e42f.chunk.js": "/dynastyffl/static/js/2.86e2e42f.chunk.js",
+    "static/js/2.86e2e42f.chunk.js.map": "/dynastyffl/static/js/2.86e2e42f.chunk.js.map",
     "index.html": "/dynastyffl/index.html",
-    "precache-manifest.ca1bb79e2d7369fa8c7d18290ce1f8b0.js": "/dynastyffl/precache-manifest.ca1bb79e2d7369fa8c7d18290ce1f8b0.js",
+    "precache-manifest.d93e0e3fada9ab8b08794574c6ee2c96.js": "/dynastyffl/precache-manifest.d93e0e3fada9ab8b08794574c6ee2c96.js",
     "service-worker.js": "/dynastyffl/service-worker.js",
-    "static/css/main.682ca21c.chunk.css.map": "/dynastyffl/static/css/main.682ca21c.chunk.css.map"
+    "static/css/main.682ca21c.chunk.css.map": "/dynastyffl/static/css/main.682ca21c.chunk.css.map",
+    "static/media/LeagueCode.md": "/dynastyffl/static/media/LeagueCode.c1f50573.md"
   }
 }
