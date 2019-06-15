@@ -1,42 +1,30 @@
 import React, { Component } from 'react';
-import Table from './Table';
-import Form from './Form';
+import Blog from './Blog';
+import Code from './LeagueCode.md';
+
 
 class App extends Component {
 
-    state = {
-        characters: [
-            
-        ]
-    };
+    constructor(props){
+        super(props);
+        this.state = {
+          mdText: "",
+          posts: [Code]
+        }
+    }; 
 
-    removeCharacter = index => {
-        const { characters } = this.state;
-
-        this.setState({
-            characters: characters.filter((character, i) => {
-                return i !== index
-            })
+    componentWillMount () {
+        fetch(this.state.posts[0]).then((response) => response.text()).then((text) => {
+            this.setState({mdText: text});            
         });
     }
 
-    handleSubmit = character => {
-        this.setState({ characters: [...this.state.characters, character] })
-    }
-
-    render() {        
-        /* const name = 'Luke';
-        const heading = <h1 className="App">Hello, {name}</h1>
-
-        return heading; */
+    render() {                
 
         return (
-            <div className="container">
-                <Table characterData={this.state.characters} removeCharacter={this.removeCharacter}/>
-                <Form handleSubmit={this.handleSubmit}/>
-            </div>
-        )
+            <Blog mdText={this.state.mdText} />            
+        );
     }
 }
 
-export default App
+export default App;
