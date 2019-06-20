@@ -51,7 +51,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.grey[800],
     color: theme.palette.common.white,
     marginBottom: theme.spacing(4),
-    backgroundImage: 'url(https://source.unsplash.com/user/erondu)',
+    backgroundImage: 'url(https://cdn2.sportngin.com/attachments/photo/3523/5538/Power_Rankings_large.png)',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
@@ -103,16 +103,15 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const sections = [
-  'Technology',
-  'Design',
-  'Culture',
-  'Business',
-  'Politics',
-  'Opinion',
-  'Science',
-  'Health',
-  'Style',
-  'Travel',
+  'Home',
+  'League Code',
+  'Managers',
+  'Power Rankings',
+  'Weekly GOAT',
+  'Weekly Bro',
+  'Draft Picks',
+  'Champions',
+
 ];
 
 const featuredPosts = [
@@ -131,46 +130,42 @@ const featuredPosts = [
 ];        
 
 const archives = [
-  'March 2020',
-  'February 2020',
-  'January 2020',
-  'December 2019',
-  'November 2019',
-  'October 2019',
-  'September 2019',
-  'August 2019',
-  'July 2019',
-  'June 2019',
-  'May 2019',
-  'April 2019',
+  'Week 1',
+  'Week 2',
+  'Week 3',
+  'Week 4',
+  'Week 5',
+  'Week 6',
+  'Week 7',
+  'Week 8',
+  'Week 9',
+  'Week 10',
+  'Week 11',
+  'Week 12',
+  'Week 13'
 ];
 
-const social = ['GitHub', 'Twitter', 'Facebook'];
-
-// const getMarkdown = await Promise.all(fetch(posts[0]).then((response) => response.text()).then((text) => {
-//   return text;            
-// }));
+const social = [
+  {
+    name: 'GitHub',
+    url: "https://github.com/lrtoenjes/dynastyffl"
+  }, 
+  {
+    name: 'Sleeper App',
+    url: "https://sleeper.app/leagues/407291191407734784"
+  }];
 
 export default function Blog(props) {
-//class Blog extends React.Component{
+
   
    const mdText = props.mdText;
    const classes = useStyles();
-
-  // const classes = useStyles();
-  // const mdText = fetch(posts[0]).then((response) => response.text()).then((text) => {
-  //                   return text;            
-  //                 });    
-
-
- // render() {
 
     return (
       <React.Fragment>
         <CssBaseline />
         <Container maxWidth="lg">
-          <Toolbar className={classes.toolbar}>
-            <Button size="small">Subscribe</Button>
+          <Toolbar className={classes.toolbar}>            
             <Typography
               component="h2"
               variant="h5"
@@ -179,14 +174,8 @@ export default function Blog(props) {
               noWrap
               className={classes.toolbarTitle}
             >
-              Blog
+              GOATs and Bros Fantasy Football League
             </Typography>
-            <IconButton>
-              <SearchIcon />
-            </IconButton>
-            <Button variant="outlined" size="small">
-              Sign up
-            </Button>
           </Toolbar>
           <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
             {sections.map(section => (
@@ -209,7 +198,7 @@ export default function Blog(props) {
               {
                 <img
                   style={{ display: 'none' }}
-                  src="https://source.unsplash.com/user/erondu"
+                  src=""
                   alt="background"
                 />
               }
@@ -270,9 +259,7 @@ export default function Blog(props) {
             <Grid container spacing={5} className={classes.mainGrid}>
               {/* Main content */}
               <Grid item xs={12} md={8}>
-                <Typography variant="h6" gutterBottom>
-                  From the Firehose
-                </Typography>
+                
                 <Divider />
                            
                   <Markdown className={classes.markdown} >
@@ -294,7 +281,7 @@ export default function Blog(props) {
                   </Typography>
                 </Paper>
                 <Typography variant="h6" gutterBottom className={classes.sidebarSection}>
-                  Archives
+                  Power Rankings
                 </Typography>
                 {archives.map(archive => (
                   <Link display="block" variant="body1" href="#" key={archive}>
@@ -305,8 +292,8 @@ export default function Blog(props) {
                   Social
                 </Typography>
                 {social.map(network => (
-                  <Link display="block" variant="body1" href="#" key={network}>
-                    {network}
+                  <Link display="block" variant="body1" href={network.url} key={network.name}>
+                    {network.name}
                   </Link>
                 ))}
               </Grid>
